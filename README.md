@@ -1,4 +1,13 @@
-Hey there 
+![banner](assets/banner-top.png)
+
+## Interests
+
+- **Performance Engineering**
+- **Constrained Systems**
+- **Hardware/Software Co-Design**
+- **Graph Workloads**
+
+## Blog Posts
 
 <!-- BLOG-POSTS:START -->
 
@@ -9,3 +18,5 @@ Hey there
 | `2026-05-19` | [GSoC 2026: a Hopeful Rejection](https://victoryanson.com/blog/gsoc-2026-a-hopeful-rejection) | `OpenStreetMap` | 4 min read |
 
 <!-- BLOG-POSTS:END -->
+
+![banner](assets/banner-bottom.png)
