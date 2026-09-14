@@ -2,7 +2,7 @@ import urllib.request
 import json
 import re
 
-API_URL = "https://victoryanson.com/api/articles?type=blog&limit=3"
+API_URL = "https://victoryanson.com/api/articles?type=blog&limit=5"
 README_PATH = "README.md"
 
 def fetch_blogs():
