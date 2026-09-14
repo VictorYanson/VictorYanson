@@ -1,11 +1,42 @@
-name: Update Profile
+name: Update Profile README
 
 on:
   repository_dispatch:
     types: [web_repo_pushed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Triggered by push to victoryanson.com!"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Fetch Articles & Update README
+        run: python .github/scripts/update_readme.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update latest blog posts in README"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          else
+            echo "No changes detected in README.md"
+          fi
