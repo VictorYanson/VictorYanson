@@ -1,0 +1,11 @@
+name: Update Profile
+
+on:
+  repository_dispatch:
+    types: [web_repo_pushed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered by push to victoryanson.com!"
