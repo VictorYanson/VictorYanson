@@ -4,6 +4,8 @@ on:
   repository_dispatch:
     types: [web_repo_pushed]
   workflow_dispatch:
+  schedule:
+    - cron: '0 */12 * * *'
 
 permissions:
   contents: write
@@ -31,7 +33,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          
+
           if ! git diff --staged --quiet; then
             git commit -m "chore: update latest blog posts in README"
             git fetch origin main
