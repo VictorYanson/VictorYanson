@@ -13,6 +13,7 @@
 
 | Date | Article | Category | Reading Time |
 | :--- | :--- | :--- | :--- |
+| `2026-10-18` | [Math For Computer Scientists](https://victoryanson.com/blog/math-for-computer-scientists) | `Mathematics` | 15 min read |
 | `2026-10-08` | [Finishing Kaishi](https://victoryanson.com/blog/finishing-kaishi) | `Japanese Study` | 6 min read |
 | `2026-08-23` | [Pico Router Changes Directions](https://victoryanson.com/blog/pico-router-changes-directions) | `Pico Router` | 6 min read |
 | `2026-07-17` | [Anki Baby Steps](https://victoryanson.com/blog/anki-baby-steps) | `Japanese Study` | 4 min read |
